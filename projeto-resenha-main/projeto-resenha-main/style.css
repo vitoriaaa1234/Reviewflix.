@@ -1,0 +1,214 @@
+@charset 'UTF-8';
+
+:root {
+    --cor1: #2b2d42 ;
+    --cor2: #8d99ae ;
+    --cor3: #edf2f4 ;
+    --cor4: #ef233c ;
+    --cor5: #d90429 ;
+    --cor6: #ffc300;
+    --cor7: #ffd60a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor3);
+}
+main > header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #d90429
+}
+
+main > header > nav > a#home {
+    position: relative;
+    left: -10%;
+    top: 15%;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+}
+
+main > header > nav > a#home:hover {
+    border: 1px solid rgba(0, 0, 0, 0.548);
+    color: rgba(0, 0, 0, 0.548);
+}
+
+main > header > nav > fieldset {
+    padding: 10px;
+    border-radius: 10px;
+    /* display: flex; */
+    justify-content: center;
+    display: inline-block;
+    border: 1px solid white;
+}
+
+main > header > nav > fieldset > a {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}
+
+main > header > nav > fieldset > a:hover {
+    color: rgba(0, 0, 0, 0.548);
+    text-decoration: underline;
+}
+
+main > header > input[type=search] {
+    position: relative;
+    left: 2%;
+    margin-top: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.548);
+    border-radius: 10px;
+    height: 25px;
+    padding: 8px;
+}
+
+
+main > section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.zoom {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.zoom img {
+    border-radius: 10px;
+    max-width: 95%;
+    max-height: 95%;
+    transition: all 0.3s;
+}
+
+.zoom img:hover {
+    transform: scale(1.1);   
+}
+
+section > article {
+    max-width: 500px;
+    padding: 15px;
+}
+
+section > article > h1 {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+section > article > p {
+    text-align: justify;
+    text-indent: 20px;
+}
+
+section > article > h2 {
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px;
+}
+
+#home {
+    color: white; /* Define a cor do texto como branco */
+    text-align: left; /* Alinha o texto à esquerda */
+    position: absolute; /* Posiciona de forma absoluta na página */
+    top: 0; /* Alinha o texto no topo da página */
+    left: 0; /* Alinha o texto à esquerda */
+    margin: 20px; /* Adiciona uma margem para afastar o texto um pouco das bordas */
+    font-size: 2.5em; /* Define o tamanho da fonte, você pode ajustar como quiser */
+}
+
+main > section > article > input[type=range] {
+    position: relative;
+    left: 35%;
+}
+
+.estrelas {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.estrelas input {
+    display: none;
+}
+
+.estrelas label {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+}
+
+.estrelas label:before {
+    content: '\f005';
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 30px;
+    color: #8d99ae;
+}
+
+.estrelas label:after {
+    content: '\f005';
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 30px;
+    color: #ffc300;
+    top: -50%;
+    opacity: 0;
+    transition: .5s;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.26) ;
+}
+
+.estrelas label:hover:after,
+.estrelas input:checked ~ label:after {
+    opacity: 1;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilo para os links de redes sociais */
+.footer .social-media {
+    margin-top: 10px;
+}
+
+.footer .social-media a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer .social-media a:hover {
+    color: #00aaff;
+}

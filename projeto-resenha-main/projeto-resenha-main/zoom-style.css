@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+
+.zoom {
+    display: flex;
+    margin-top: 20vh;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.zoom img {
+    max-width: 100%;
+    transition: all 0.3s;
+}
+
+.zoom img:hover {
+    transform: scale(1.1);   
+}
